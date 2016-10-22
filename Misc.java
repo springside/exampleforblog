@@ -1,3 +1,6 @@
+import java.lang.reflect.Field;
+
+import com.sun.btrace.AnyType;
 
 @BTrace
 public class DemoTracer2 {
