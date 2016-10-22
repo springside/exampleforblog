@@ -5,8 +5,10 @@ import com.sun.btrace.AnyType;
 @BTrace
 public class DemoTracer2 {
 	
+	//JDK的类这样写就行
 	private static Field fdFiled = field("java.io,FileInputStream", "fd");
-
+	
+	//非JDK的类，要给出ClassLoader，否则ClassNotFound
 	private static Field portField = field(classForName("com.vip.demo.MyObject", contextClassLoader()), "port");
 
 	@TLS
