@@ -78,6 +78,8 @@ public static void onBind3(@Self Object self, @TargetInstance Object instance, @
 	public static void onSystemGC() {
 		println("entered System.gc()");
 		jstack();
+		println(strcat(strcat(probeClass, "."), probeMethod));
+		println(probeClass + '.' + probeMethod);
 	}
     
 }
