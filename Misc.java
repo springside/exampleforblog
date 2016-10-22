@@ -6,3 +6,5 @@ println(strcat(strcat(probeClass, "."), probeMethod));
 @OnMethod(clazz="@javax.jws.WebService", method="@javax.jws.WebMethod")
 
 @OnMethod(clazz="java.net.ServerSocket", method="<init>")
+
+@OnMethod( clazz="java.net.ServerSocket", method="bind" )
