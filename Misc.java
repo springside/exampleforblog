@@ -14,3 +14,8 @@ public static mythond(){
 @OnMethod(clazz = "java.net.ServerSocket", method = "getLocalPort", location = @Location(Kind.RETURN))
 public static void onGetLocalPort(@Return int port, @Duration long duration) {
 }
+
+@OnMethod(clazz = "java.net.ServerSocket", method = "bind", location = @Location(Kind.ERROR))
+public static void onBind(Throwable exception, @Duration long duration){
+}
+    
